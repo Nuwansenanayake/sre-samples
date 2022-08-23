@@ -11,6 +11,10 @@ pipeline {
                 sh 'ls'
                 sh 'cd /home/nuwan/Documents/work/sre/Jira/patching' 
                 sh 'mkdir -p /home/nuwan/Documents/work/sre/Jira/patching/jenkins/test'
+                sh """
+                    cd /home/nuwan/Documents/work/sre/Jira/patching
+                    mkdir -p jenkins/test2
+                """
             }
         }
     }
