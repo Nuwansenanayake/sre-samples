@@ -10,7 +10,7 @@ pipeline {
                 sh 'mvn --version'
                 sh 'ls'
                 sh 'cd /home/nuwan/Documents/work/sre/Jira/patching' 
-                sh 'mkdir -p jenkins/test'
+                sh 'mkdir -p /home/nuwan/Documents/work/sre/Jira/patching/jenkins/test'
             }
         }
     }
