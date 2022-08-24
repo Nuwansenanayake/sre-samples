@@ -23,6 +23,7 @@ pipeline {
                     unzip patch-axp-dep-6.0.0.SNAPSHOT-001 -d out/
                     cd out
                     cp -R patch-axp-dep-6.0.0.SNAPSHOT-001/* axp-dep-6.0.0.SNAPSHOT 
+                    zip axp-dep-6.0.0.SNAPSHOT-001.zip axp-dep-6.0.0.SNAPSHOT/* 
                 """
             }
         }
