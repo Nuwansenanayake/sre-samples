@@ -20,6 +20,7 @@ pipeline {
                     mkdir -p out
                     unzip "${env_pack_name}" -d out/
                     unzip "${env_patch_name}" -d out/
+                    cd out/
                     cp -R "${env_patch_name}"/* "${env_pack_name}" 
                     zip -r "${env_newpack_name}" "${env_pack_name}"/* 
                 """
