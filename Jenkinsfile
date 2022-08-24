@@ -20,7 +20,7 @@ pipeline {
                     pwd
                     mkdir -p out
                     unzip axp-dep-6.0.0.SNAPSHOT -d out/
-                    unzip patch-axp-dep-6.0.0.SNAPSHOT-001.zip -d out/
+                    unzip patch-axp-dep-6.0.0.SNAPSHOT-001 -d out/
                 """
             }
         }
