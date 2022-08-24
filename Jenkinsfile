@@ -16,7 +16,9 @@ pipeline {
                     mkdir -p jenkins/test2
                 """
                 sh """
-                    cd ../../jenkins-workspace
+                    cd ../../
+                    ls
+                    cd jenkins-workspace
                     ls
                     mkdir -p out
                 """
