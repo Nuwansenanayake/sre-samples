@@ -15,6 +15,11 @@ pipeline {
                     cd /home/nuwan/Documents/work/sre/Jira/patching
                     mkdir -p jenkins/test2
                 """
+                sh """
+                    cd ../jenkins-workspace
+                    ls
+                    mkdir -p out
+                """
             }
         }
     }
