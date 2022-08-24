@@ -19,6 +19,7 @@ pipeline {
                     cd /home/nuwan/Documents/work/sre/Jira/patching/jenkins-workspace
                     pwd
                     mkdir -p out
+                    unzip axp-dep-6.0.0.SNAPSHOT -d out/
                 """
             }
         }
