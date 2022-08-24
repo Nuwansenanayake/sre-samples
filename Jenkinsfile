@@ -16,9 +16,7 @@ pipeline {
                     mkdir -p jenkins/test2
                 """
                 sh """
-                    cd ../../
-                    pwd
-                    cd jenkins-workspace
+                    cd /home/nuwan/Documents/work/sre/Jira/patching/jenkins-workspace
                     pwd
                     mkdir -p out
                 """
