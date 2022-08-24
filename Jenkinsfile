@@ -17,9 +17,9 @@ pipeline {
                 """
                 sh """
                     cd ../../
-                    ls
+                    pwd
                     cd jenkins-workspace
-                    ls
+                    pwd
                     mkdir -p out
                 """
             }
