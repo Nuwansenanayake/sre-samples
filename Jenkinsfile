@@ -3,20 +3,17 @@
 
 pipeline {
     agent any
+
+    environment{
+        env.workspace.path="/home/nuwan/Documents/work/sre/Jira/patching/jenkins-workspace"        
+    }
+
     stages {
         stage('build') {
             
             steps {
-                sh 'mvn --version'
-                sh 'ls'
-                sh 'cd /home/nuwan/Documents/work/sre/Jira/patching' 
-                sh 'mkdir -p /home/nuwan/Documents/work/sre/Jira/patching/jenkins/test'
                 sh """
-                    cd /home/nuwan/Documents/work/sre/Jira/patching
-                    mkdir -p jenkins/test2
-                """
-                sh """
-                    cd /home/nuwan/Documents/work/sre/Jira/patching/jenkins-workspace
+                    cd "${env.workspace.path}"
                     pwd
                     mkdir -p out
                     unzip axp-dep-6.0.0.SNAPSHOT -d out/
