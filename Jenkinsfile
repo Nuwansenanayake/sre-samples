@@ -17,6 +17,9 @@ pipeline {
             steps {
                 sh """
                     cd "${env_workspace_path}"
+                    
+                    rm -r out/
+
                     mkdir -p out
                     unzip "${env_pack_name}" -d out/
                     unzip "${env_patch_name}" -d out/
