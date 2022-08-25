@@ -21,8 +21,8 @@ pipeline {
                     rm -r -f out/
 
                     mkdir -p out
-                    unzip "${env_pack_name}" -d out/
-                    unzip "${env_patch_name}" -d out/
+                    unzip -f "${env_pack_name}" -d out/
+                    unzip -f "${env_patch_name}" -d out/
                     cd out/
                     cp -R "${env_patch_name}"/* "${env_pack_name}" 
                     ## zip -rq "${env_newpack_name}" "${env_pack_name}"/* 
