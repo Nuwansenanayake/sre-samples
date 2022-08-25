@@ -12,7 +12,7 @@ pipeline {
     }
 
     stages {
-        stage('build') {
+        stage('Merge Patch to Release Pack') {
             
             steps {
                 sh """
@@ -24,7 +24,14 @@ pipeline {
                     cp -R "${env_patch_name}"/* "${env_pack_name}" 
                     zip -r "${env_newpack_name}" "${env_pack_name}"/* 
                 """
+
+
             }
+        }
+        stage('post test'){
+            steps{
+                sh "echo 'nuwan testing'"
+            }    
         }
     }
 }
