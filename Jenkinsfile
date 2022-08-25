@@ -12,30 +12,36 @@ pipeline {
     }
 
     stages {
-        stage('Merge Patch to Release Pack') {
+        // stage('Merge Patch to Release Pack') {
             
-            steps {
-                sh """
-                    cd "${env_workspace_path}"
+        //     steps {
+        //         sh """
+        //             cd "${env_workspace_path}"
                     
-                    rm -r -f out/
+        //             rm -r -f out/
 
-                    mkdir -p out
-                    unzip -q "${env_pack_name}" -d out/
-                    unzip -q "${env_patch_name}" -d out/
-                    cd out/
-                    cp -R "${env_patch_name}"/* "${env_pack_name}" 
-                    ## zip -rq "${env_newpack_name}" "${env_pack_name}"/* 
-                """
+        //             mkdir -p out
+        //             unzip -q "${env_pack_name}" -d out/
+        //             unzip -q "${env_patch_name}" -d out/
+        //             cd out/
+        //             cp -R "${env_patch_name}"/* "${env_pack_name}" 
+        //             zip -rq "${env_newpack_name}" "${env_pack_name}"/* 
+        //         """
+        //     }
+        // }
 
-
-            }
-        }
         stage('post test'){
             steps{
                 sh "pwd"
             }    
         }
+
+        stage('post test 2'){
+            steps{
+                sh "pwd"
+            }    
+        }
+
     }
 }
 
