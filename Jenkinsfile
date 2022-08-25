@@ -25,7 +25,7 @@ pipeline {
                     unzip "${env_patch_name}" -d out/
                     cd out/
                     cp -R "${env_patch_name}"/* "${env_pack_name}" 
-                    // zip -rq "${env_newpack_name}" "${env_pack_name}"/* 
+                    ## zip -rq "${env_newpack_name}" "${env_pack_name}"/* 
                 """
 
 
